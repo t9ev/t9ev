@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&family=Shadows+Into+Light&display=swap');
+
+* { 
+    box-sizing: border-box; margin: 0; padding: 0; 
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #1a1a1a;
+    color: rgb(207, 207, 207);
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 1s forwards;
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body:nth-child(1) { animation-delay: 0.2s; }
+body:nth-child(2) { animation-delay: 0.4s; }
+body:nth-child(3) { animation-delay: 0.6s; }
+body:nth-child(4) { animation-delay: 0.8s; }
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px 20px;
+    background: #1d1c1c;
+    font-family: "Shadows Into Light", cursive;
+}
+
+header a { color: #cfcfcf; text-decoration: none; }
+header .navbar-links { display: flex; align-items: center; gap: 15px; }
+header .icons-links { display: flex; gap: 10px; font-size: 22px; }
+
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.pfp img {
+    border-radius: 50%;
+    height: 250px;
+    max-width: 100%;
+}
+
+.profile-info { max-width: 500px; }
+
+.profile .info {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.profile .info h2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.profile .info h2 span {
+    color: orange;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    text-shadow: 0 0 10px orange;
+}
+
+.hire-me a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    background: transparent;
+    transition: 0.3s;
+    position: relative;
+    right: 18px;
+}
+.hire-me a:hover { 
+    color: orange; text-shadow: 0 0 15px orange; 
+}
+
+.showcase-btns a {
+    color: white;
+    font-family: "Shadows Into Light", cursive;
+    font-size: 28px;
+    padding: 10px 15px;
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.showcase-btns a:hover {
+    color: orange; text-shadow: 0 0 15px orange;
+}
+
+.line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.line img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.line a:hover img { transform: scale(1.05); box-shadow: 0 0 20px rgba(255,255,255,0.3); }
+
+.content { display: none; }
+.content.active { display: block; }
+
+@media (max-width: 768px) {
+    header { flex-direction: column; text-align: center; }
+    .profile {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    }
+    .pfp img { height: 150px; }
+
+    .profile .info {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    }
+
+    .hire-me a { font-size: 18px; padding: 8px 15px; }
+    .showcase-btns a { font-size: 22px; }
+}
+
+footer {
+    background: #1d1c1c;
+    text-align: center;
+    height: 6vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer a {
+    text-decoration: underline;
+    color: #393939;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    transition: 0.4s;
+}
+
+.email {
+    display: flex;
+    gap: 10px;
+}
+.emil {
+    position: relative;
+    top: -2px;
+}
+
+footer a:hover {
+    color: orange; text-shadow: 0 0 15px orange;
+}
