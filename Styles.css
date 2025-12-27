@@ -27,11 +27,17 @@ body:nth-child(4) { animation-delay: 0.8s; }
 
 header {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    gap: 500px;
+    flex-wrap: wrap;
     padding: 12px 20px;
     background: #1d1c1c;
     font-family: "Shadows Into Light", cursive;
+    width: 50%;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.189);
 }
 
 header a { color: #cfcfcf; text-decoration: none; }
@@ -123,8 +129,34 @@ header .icons-links { display: flex; gap: 10px; font-size: 22px; }
 .content { display: none; }
 .content.active { display: block; }
 
+.editing {
+    background: #1d1c1c;
+    text-align: center;
+    height: 6vh;
+    width: 20%;
+    border: 1px solid gray;
+
+}
+
+.editing h2 {
+    position: relative;
+    top: 4px;
+    text-shadow: 0 0 15px orange;
+    color: orange;
+    font-family: 'Courier New', monospace;
+}
+
+.editing img {
+    height: 30px;
+    position: relative;
+    top: 7px;
+}
+
 @media (max-width: 768px) {
-    header { flex-direction: column; text-align: center; }
+    header { flex-direction: column; text-align: center; flex-wrap: wrap; height: 60px; width: auto; position: relative; } 
+    header .logo { position: relative; right: -10px;}
+    header .navbar-links { position: relative; right: 360px;}
+
     .profile {
     flex-direction: column;
     gap: 20px;
@@ -140,6 +172,9 @@ header .icons-links { display: flex; gap: 10px; font-size: 22px; }
 
     .hire-me a { font-size: 18px; padding: 8px 15px; }
     .showcase-btns a { font-size: 22px; }
+
+    .editing { width: 70%;}
+
 }
 
 footer {
