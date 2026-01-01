@@ -78,6 +78,58 @@
                 </div>
             </div>
 
+            <center>
+
+            <div class="yt-slider">
+
+                <div class="slide-title">
+                    <h2 style="color: orange; text-shadow: 0 0 15px orange;">My Lastest Work</h2>
+                </div>
+
+                <br><br>
+
+                <div class="yt-track">
+
+                    <a href="https://www.youtube.com/watch?v=-qXuDTWpUHY&t" target="_blank" class="yt-card">
+                    <img src="https://i.ytimg.com/vi/-qXuDTWpUHY/hqdefault.jpg?sqp=-oaymwEnCOADEI4CSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAovVnP-6vOSnVanGS28kFA6QzsmA">
+                    <h3>أشهر مابات روبلوكس خسرت كل لاعبيها فجأة ؟</h3>
+                    </a>
+
+                    <a href="https://www.youtube.com/watch?v=ghGB0pB7Jwc&t" target="_blank" class="yt-card">
+                    <img src="https://i.ytimg.com/vi/ghGB0pB7Jwc/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBt4GBDqk_qUseb7w8O9YYQiSHIlg">
+                    <h3>القصة المرعبة وراء الاطفال المفقودين في 99 ليلة في الغابة / Roblox 99 Nights in the Forest</h3>
+                    </a>
+
+                    <a href="https://www.youtube.com/watch?v=r_YU7DF9tB4&t " target="_blank" class="yt-card">
+                    <img src="https://i.ytimg.com/vi/r_YU7DF9tB4/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAcIyID3bsVaj3DXL8X0GAwoQ9L5Q">
+                    <h3>ماب السرقة لاكن عندي حظ لا نهائي 🤑 Roblox Steal a Brainrot</h3>
+                    </a>
+
+                    <a href="https://drive.google.com/file/d/1uJTrOHA1IxKX-pCB95kBBUWXjaRsTAIi/view" target="_blank" class="yt-card">
+                    <img src="https://media.discordapp.net/attachments/1361763840127140010/1456227524039151646/image.png?ex=69579911&is=69564791&hm=c0cd0c7055a15109b6a593296d4fc336f964ccc70a6afa1a90410bed9c569d13&=&format=webp&quality=lossless">
+                    <h3>كشفت اسرار ماب 99 ليلة / Roblox 99 Nights in the Forest</h3>
+                    </a>
+
+                    <a href="https://www.youtube.com/watch?v=7oAGIeB0p4w&t" target="_blank" class="yt-card">
+                    <img src="https://i.ytimg.com/vi/7oAGIeB0p4w/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBcFL7gXkf9Lqf5navgf3Iz1ZGq9Q">
+                    <h3>من 0$ الى 10$ ترليون لكن مع قدرات الادمن 🤑 Roblox Steal a Brainrot</h3>
+                    </a>
+
+                    <a href="https://www.youtube.com/watch?v=e8rOCDEL_SE" target="_blank" class="yt-card">
+                    <img src="https://i.ytimg.com/vi/e8rOCDEL_SE/hqdefault.jpg?sqp=-oaymwEnCOADEI4CSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLANJbbCx8RY3u695cU8Dqf9uD0l7Q">
+                    <h3>BLOX FRUITS / من نوب الى محترف بالكنترول بس !! (الكنترول الجديدة طلعت 💩)</h3>
+                    </a>
+
+                    <a href="https://www.youtube.com/watch?v=OslFOcSn3fU&t" target="_blank" class="yt-card">
+                    <img src="https://i.ytimg.com/vi/OslFOcSn3fU/hqdefault.jpg?sqp=-oaymwEnCOADEI4CSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLClIB6uaV9uAiETd8mWx1fVw8hGVg">
+                    <h3>روبلوكس فضحت كم ياخذوا اشهر المطورين من مابات حقهم ..</h3>
+                    </a>
+
+                </div>
+            </div>
+
+            </center>
+
         </section-1>
 
         <section-2 class="Portfolio-Abt-me">
@@ -155,6 +207,34 @@
 
 
         <script src="main.js"></script>
+        <script>
+        const track = document.querySelector(".yt-track");
+        let speed = 0.5; 
+        let pos = 0;
+
+        function loop() {
+            pos -= speed;
+
+            const firstCard = track.children[0];
+            const cardWidth = firstCard.offsetWidth + 25;
+
+            if (Math.abs(pos) >= cardWidth) {
+            pos += cardWidth;
+            track.appendChild(firstCard);
+            }
+
+            track.style.transform = `translateX(${pos}px)`;
+            requestAnimationFrame(loop);
+        }
+
+        loop();
+
+        track.addEventListener("mouseenter", () => speed = 0);
+        track.addEventListener("mouseleave", () => speed = 0.5);
+        track.addEventListener("click", () => speed = 0);
+        </script>
+
+
 
     </main>
 
