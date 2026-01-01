@@ -207,3 +207,49 @@ footer a {
 footer a:hover {
     color: orange; text-shadow: 0 0 15px orange;
 }
+
+.yt-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 16px 0;
+
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 3%,
+    black 7%,
+    black 93%,
+    transparent 97%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 3%,
+    black 7%,
+    black 93%,
+    transparent 97%
+  );
+}
+
+
+
+.yt-track {
+  display: flex;
+  gap: 10px;
+  will-change: transform;
+}
+
+.yt-card {
+  width: 260px; /* حجم ثابت */
+  flex-shrink: 0;
+  text-decoration: none;
+  color: white;
+}
+
+.yt-card img {
+  width: 100%;
+  height: 150px;          /* ← عدّل الارتفاع حسب ذوقك */
+  object-fit: cover;     /* يقص بدون تشويه */
+  border-radius: 16px;
+  display: block;
+}
+
